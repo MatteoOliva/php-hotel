@@ -7,9 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <?php foreach ($hotels as $hotel[$index]);?>
+
+    <?php foreach ($hotels as $hotel): ?>
     <ul>
-        <li><?php $hotel[$index]?></li>
+        <li>
+            <?= $hotel['name']?>
+        </li>
     </ul>
+    <?php endforeach ?>
+    
 </body>
 </html>
