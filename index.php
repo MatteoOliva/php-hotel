@@ -33,7 +33,7 @@
                     </td>
 
                     <td>
-                        <?= $hotel['parking'] ? 'Si' : 'No'?>
+                        <?= $hotel['parking'] ? 'Si' : 'No'?> 
                     </td>
 
                     <td>
@@ -41,7 +41,7 @@
                     </td>
 
                     <td>
-                        <?= $hotel['distance_to_center'] ?> km
+                        <?= $hotel['distance_to_center'] ?> km 
                     </td>
                 </tr>
 
