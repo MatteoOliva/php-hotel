@@ -9,31 +9,15 @@
 <body>
 
     <?php foreach ($hotels as $hotel): ?>
-    <ul>
-        <li> <b>nome</b>
-            <?= $hotel['name']?>
-        </li>
-    </ul>
-    <ul>
-        <li> <b>Descrizione</b>
-            <?= $hotel['description']?>
-        </li>
-    </ul>
-    <ul>
-        <li> <b>parcheggio</b>
-            <?= $hotel['parking']?>
-        </li>
-    </ul>
-    <ul>
-        <li> <b>voto</b>
-            <?= $hotel['vote']?>
-        </li>
-    </ul>
-    <ul>
-        <li> <b>distanza dal centro</b>
-            <?= $hotel['distance_to_center']?>
-        </li>
-    </ul>
+        <table>
+            <tbody>
+            <tr><th>nome: <?= $hotel['name']?></th></tr>
+            <tr><th>Descrizione: <?= $hotel['description']?></th></t>
+            <tr><th>parcheggio: <?= $hotel['parking']?></th></tr>
+            <tr><th>voto: <?= $hotel['vote']?></th></tr>
+            <tr><th>distanza dal centro: <?= $hotel['distance_to_center']?></th></tr>
+            </tbody>
+        </table>
     <br>
     <?php endforeach ?>
     
