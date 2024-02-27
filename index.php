@@ -8,18 +8,44 @@
 </head>
 <body>
 
-    <?php foreach ($hotels as $hotel): ?>
+    
         <table>
+
+            <thead>
+            <tr>
+                <th>nome </th>
+                <th>descrizione</th>
+                <th>parcheggio</th>
+                <th>voto</th>
+                <th> distanza dal centro</th>
+            </tr>
+            </thead>
+
             <tbody>
-            <tr><th>nome: <?= $hotel['name']?></th></tr>
-            <tr><th>Descrizione: <?= $hotel['description']?></th></t>
-            <tr><th>parcheggio: <?= $hotel['parking']?></th></tr>
-            <tr><th>voto: <?= $hotel['vote']?></th></tr>
-            <tr><th>distanza dal centro: <?= $hotel['distance_to_center']?></th></tr>
+            <?php foreach ($hotels as $hotel): ?>
+            <tr>
+                <td><?= $hotel['name']?></td>
+        
+                <td><?= $hotel['description']?></td>
+           
+                <td><?= $hotel['parking']?></td>
+            
+                <td><?= $hotel['vote']?></td>
+           
+                <td><?= $hotel['distance_to_center']?></td>
+            </tr>
+
+            <?php endforeach ?>
             </tbody>
+
         </table>
-    <br>
-    <?php endforeach ?>
     
 </body>
 </html>
+<style>
+    table{
+        border: 1px solid blue;
+        text-align: center;
+        padding: 15px;
+    }
+</style>
