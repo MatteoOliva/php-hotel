@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-
     <table>
 
         <thead>
@@ -35,7 +33,7 @@
                     </td>
 
                     <td>
-                        <?= $hotel['parking'] ?>
+                        <?= $hotel['parking'] ? 'Si' : 'No'?>
                     </td>
 
                     <td>
@@ -57,18 +55,23 @@
 </html>
 <style>
     table {
-        border: 1px solid grey;
+        border: 5px solid grey;
         text-align: center;
-        padding: 15px;
+        padding: 5px;
+        background-color: cyan;
+        margin: auto;
     }
 
     th {
         border: 1px solid red;
         padding: 7px;
+        border-radius: 9px;
+        background-color: white;
     }
 
     td {
         border: 1px solid blue;
-
+        border-radius: 9px;
+        background-color: white;
     }
 </style>
