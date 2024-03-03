@@ -33,7 +33,7 @@
                     </td>
 
                     <td>
-                        <?= $hotel['parking'] ? 'Si' : 'No'?> 
+                        <?= $hotel['parking'] ? 'Si' : 'No' ?>
                     </td>
 
                     <td>
@@ -41,7 +41,7 @@
                     </td>
 
                     <td>
-                        <?= $hotel['distance_to_center'] ?> km 
+                        <?= $hotel['distance_to_center'] ?> km
                     </td>
                 </tr>
 
@@ -49,6 +49,16 @@
         </tbody>
 
     </table>
+    <div class="filter">
+    <form method="GET">
+        <input type="checkbox" id="check-parking" name="" value="">
+        <label for="check-parking" name="check-parking">Parcheggio</label><br>
+        <button class="btn">
+            Filtra
+            </button>
+
+    </form>
+    </div>
 
 </body>
 
@@ -73,5 +83,18 @@
         border: 1px solid blue;
         border-radius: 9px;
         background-color: white;
+    }
+    .filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn {
+        width: 70px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: greenyellow;
+        text-align: center;
+        
     }
 </style>
