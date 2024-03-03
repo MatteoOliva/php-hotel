@@ -51,8 +51,10 @@
     </table>
     <div class="filter">
     <form method="GET">
-        <input type="checkbox" id="check-parking" name="" value="">
-        <label for="check-parking" name="check-parking">Parcheggio</label><br>
+        <input type="checkbox" id="check-parking" name="check-parking"
+        <?=$filter_parking ? 'checked' : '' ?>
+        >
+        <label for="check-parking">Parcheggio</label><br>
         <button class="btn">
             Filtra
             </button>

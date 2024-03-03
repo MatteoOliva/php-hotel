@@ -40,5 +40,5 @@
 
     ];
     
+    $filter_parking = (isset($_GET['check-parking'])) ? true : false;
     
-
