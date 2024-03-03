@@ -50,16 +50,24 @@
 
     </table>
     <div class="filter">
-    <form method="GET">
-        <input type="checkbox" id="check-parking" name="check-parking"
-        <?=$filter_parking ? 'checked' : '' ?>
-        >
-        <label for="check-parking">Parcheggio</label><br>
-        <button class="btn">
-            Filtra
-            </button>
+        <form method="GET">
 
-    </form>
+            <div id="parcheggio">
+            <input type="checkbox" id="check-parking" name="check-parking" <?= $filter_parking ? 'checked' : '' ?>>
+            <label for="check-parking">Parcheggio</label><br>
+            <button class="btn">
+                Filtra
+            </button>
+            </div>
+
+            <div id="voto">
+            <label for="filter-vote">Voto</label>
+            <input type="number" id="filter-vote" min="1" max="5" name="filter-vote">
+            </div>
+
+            
+
+        </form>
     </div>
 
 </body>
@@ -86,17 +94,49 @@
         border-radius: 9px;
         background-color: white;
     }
+
     .filter {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .btn {
         width: 70px;
         height: 30px;
         border-radius: 20px;
         background-color: greenyellow;
         text-align: center;
-        
+
+    }
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 5px;
+    }
+    #parcheggio {
+        width: 80px;
+        height: 100px;
+        background-color: cyan;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        border: 1px solid black
+    }
+    #voto{
+        width: 80px;
+        height: 100px;
+        background-color: cyan;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        border: 1px solid black;
+        gap: 15px
     }
 </style>

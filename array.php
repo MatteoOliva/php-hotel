@@ -44,9 +44,13 @@
 
     if ($filter_parking) {
         
-        $hotels = array_filter($hotels, function ($hotel, $index)
-        {
-            return $hotel['parking'] == true;
-        }, ARRAY_FILTER_USE_BOTH);
+                      // versione peggiore
+        // $hotels = array_filter($hotels, function ($hotel, $index)
+        // {
+        //     return $hotel['parking'] == true;
+        // }, ARRAY_FILTER_USE_BOTH);
+
+                      // versione migliore
+        $hotels = array_filter($hotels, fn($hotel) => $hotel['parking']);
     }
     
